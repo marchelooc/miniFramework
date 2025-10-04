@@ -7,6 +7,7 @@ export class LoginPage {
     this.emailInput = 'input[id="email_address"]'; 
     this.passwordInput = 'input[id="email_password"]';
     this.loginButton = 'button[class="login_btn type_green _emailLoginButton"]';
+    this.fulLink = '//a[@data-rank="2"]';
   }
 
   async gotoLogin() {
@@ -18,8 +19,11 @@ export class LoginPage {
   async login(email, password) {
     await this.page.fill(this.emailInput, email);
     await this.page.fill(this.passwordInput, password);
-    await this.page.pause();
+    //await this.page.pause();
     await this.page.click(this.loginButton);
     await expect(this.page).toHaveURL(/webtoons\.com\/en/);
+  }
+    async precionarLink() {
+    await this.page.click(this.fulLink);
   }
 }
