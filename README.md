@@ -18,3 +18,6 @@ miniFramework del consorcio
     SOLO ESTOS----------------------------------------------------
     npm install -g allure-commandline --save-dev
     allure serve allure-results
+    EN LOCAL PARA GIT?
+    npm install allure-commandline --save-dev
+
