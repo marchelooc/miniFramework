@@ -13,7 +13,7 @@ export const test = base.extend({
     await loginPage.gotoLogin();
 
     // loguearse con credenciales de .env
-    await loginPage.login(process.env.TRELLO_EMAIL, process.env.TRELLO_PASSWORD);
+    await loginPage.login(process.env.EMAIL, process.env.PASSWORD);
 
     // entregar la página ya logueada al test
     await use(page);
