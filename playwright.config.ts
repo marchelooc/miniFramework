@@ -10,7 +10,8 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
   //fullyParallel: true,
-  reporter: 'html',
+  //reporter: 'html',
+  reporter: [["line"], ["allure-playwright"]],
   timeout: 30000,
     expect: {
         timeout: 5000
